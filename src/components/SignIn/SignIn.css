@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(78, 76, 78);
+  background-color: rgb(78, 76, 78);
 }
 .sign-in {
   width: 100%;
@@ -11,8 +11,38 @@ body {
   width: 300px;
   height: 400px;
   margin-top: 170px;
-  background-color: rgb(108, 248, 120);
+  background-color: white;
   position: absolute;
   border-radius: 5px;
-  box-shadow: 5px 5px 12px -2px rgba(0,0,0,0.92);
+  box-shadow: 5px 5px 12px -2px rgba(0, 0, 0, 0.92);
+}
+.box-input {
+  width: 260px;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.box-input input {
+  height: 50px;
+  width: 220px;
+  background-color: #3f51b5;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  outline: 0;
+}
+.box-input input::placeholder {
+  color: white;
+}
+.MuiButton-containedPrimary {
+  width: 125px !important;
+  height: 45px !important;
+  margin-left: 87.5px !important;
+  margin-top: 37px !important;
 }
