@@ -60,7 +60,7 @@ function SignIn({ setLogin }) {
           variant="contained"
           color="primary"
         >
-          Увійти
+          Log in
         </Button>
       </div>
     </div>
