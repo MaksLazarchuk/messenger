@@ -16,7 +16,7 @@
   justify-content: center;
 }
 .container {
-  height: 100%;
+  height: calc(100% - 120px);
   position: fixed;
   background-color: rgb(43, 43, 43);
   width: 768px;
@@ -48,6 +48,37 @@
   font-size: 22px !important;
   font-weight: 500 !important;
   margin-top: 2px;
+}
+#article {
+  width: 768px;
+  height: 100%;
+  margin-bottom: 60px;
+  margin: 0 auto;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+.box-message {
+  position: relative;
+  height: 60px;
+  width: 200px;
+  margin-left: 55px;
+  margin-right: 55px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border-radius: 7px;
+  background-color: rgb(80, 80, 80);
+}
+.box-message .user-name {
+  color: #67afec;
+  position: absolute;
+  margin-left: 12px;
+  margin-top: 6px;
+}
+.box-message .text-message {
+  color: white;
+  position: absolute;
+  margin-top: 32px;
+  margin-left: 12px;
 }
 .footer {
   width: 100%;

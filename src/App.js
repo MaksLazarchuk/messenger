@@ -4,12 +4,11 @@ import Chat from "./components/Chat/Chat";
 import "./App.css";
 
 function App() {
-  const [login, setLogin] = useState(false);
+  const [login, setLogin] = useState(!!localStorage.getItem('token'));
 
   return (
     <div className="App">
-      {!login && <SignIn setLogin={setLogin} />}
-      {login && <Chat />}
+      {login ? <Chat setLogin={setLogin} /> : <SignIn setLogin={setLogin} />}
     </div>
   );
 }

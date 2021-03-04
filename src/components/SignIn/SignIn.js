@@ -7,7 +7,9 @@ function SignIn({ setLogin }) {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
 
-  const Submit = () => {
+  const submit = (e) => {
+    e.preventDefault();
+
     fetch("http://localhost:3030/auth/login", {
       method: "POST",
       headers: {
@@ -20,22 +22,21 @@ function SignIn({ setLogin }) {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data.status);
         if (!data.token) {
           throw new Error();
         }
-        setLogin(true);
         localStorage.setItem("token", data.token);
-        console.log(data);
+        setLogin(true);
       })
       .catch((error) => {
         console.error(`${error}`);
       });
+
   };
 
   return (
     <div className="sign-in">
-      <div className="admittance">
+      <form className="admittance" onSubmit={submit}>
         <div className="box-input">
           <input
             value={email}
@@ -55,14 +56,14 @@ function SignIn({ setLogin }) {
           />
         </div>
         <Button
-          onClick={Submit}
           className="enter-button"
           variant="contained"
           color="primary"
+          type="submit"
         >
           Log in
         </Button>
-      </div>
+      </form>
     </div>
   );
 }
